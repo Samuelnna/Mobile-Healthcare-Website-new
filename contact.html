@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mobile Healthcare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <nav class="navbar sticky top-0 z-50 bg-gray-900 border-b border-purple-500 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-heartbeat text-pink-500 text-2xl"></i>
+                <span class="text-white font-bold text-xl bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">Mobile Healthcare</span>
+            </div>
+            
+            <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <ul id="navMenu" class="hidden md:flex space-x-8">
+                <li><a href="index.html" class="text-white hover:text-pink-400 transition duration-300 font-medium">Home</a></li>
+                <li><a href="about.html" class="text-white hover:text-pink-400 transition duration-300 font-medium">About</a></li>
+                <li><a href="services.html" class="text-white hover:text-pink-400 transition duration-300 font-medium">Services</a></li>
+                <li><a href="contact.html" class="text-white hover:text-pink-400 transition duration-300 font-medium">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div id="mobileNav" class="hidden md:hidden bg-gray-800 border-t border-purple-500 py-4">
+            <ul class="flex flex-col space-y-4 px-4">
+                <li><a href="index.html" class="text-white hover:text-pink-400 transition duration-300 block">Home</a></li>
+                <li><a href="about.html" class="text-white hover:text-pink-400 transition duration-300 block">About</a></li>
+                <li><a href="services.html" class="text-white hover:text-pink-400 transition duration-300 block">Services</a></li>
+                <li><a href="contact.html" class="text-white hover:text-pink-400 transition duration-300 block">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">Get In Touch</h1>
+            <p class="text-xl text-gray-300">We're here to help and answer any question you might have</p>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="py-20 px-4 bg-gray-800 bg-opacity-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Phone -->
+                <div class="contact-card bg-gradient-to-br from-pink-900 to-gray-900 p-8 rounded-xl border border-pink-500 hover:border-pink-300 transition duration-300 text-center">
+                    <i class="fas fa-phone text-5xl mb-4 text-pink-400"></i>
+                    <h3 class="text-2xl font-bold text-white mb-2">Phone</h3>
+                    <p class="text-gray-400 mb-4">Call us during business hours</p>
+                    <a href="tel:+18001234567" class="text-pink-400 text-xl font-bold hover:text-pink-300 transition">+1 (800) 123-4567</a>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-card bg-gradient-to-br from-purple-900 to-gray-900 p-8 rounded-xl border border-purple-500 hover:border-purple-300 transition duration-300 text-center">
+                    <i class="fas fa-envelope text-5xl mb-4 text-purple-400"></i>
+                    <h3 class="text-2xl font-bold text-white mb-2">Email</h3>
+                    <p class="text-gray-400 mb-4">Send us a message anytime</p>
+                    <a href="mailto:info@mhealthcare.com" class="text-purple-400 text-xl font-bold hover:text-purple-300 transition">info@mhealthcare.com</a>
+                </div>
+
+                <!-- Address -->
+                <div class="contact-card bg-gradient-to-br from-cyan-900 to-gray-900 p-8 rounded-xl border border-cyan-500 hover:border-cyan-300 transition duration-300 text-center">
+                    <i class="fas fa-map-marker-alt text-5xl mb-4 text-cyan-400"></i>
+                    <h3 class="text-2xl font-bold text-white mb-2">Address</h3>
+                    <p class="text-gray-400 mb-4">Visit our office</p>
+                    <p class="text-cyan-400 font-bold">123 Healthcare Ave,<br>Medical City, MC 12345</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 px-4 bg-gray-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Send us a Message</h2>
+            <form id="contactForm" class="bg-gradient-to-br from-purple-900 to-gray-900 p-8 md:p-12 rounded-xl border border-purple-500">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <!-- Name -->
+                    <div>
+                        <label for="name" class="block text-white font-bold mb-2">Full Name *</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-gray-800 border border-purple-500 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-pink-500 transition duration-300" placeholder="Your Name">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-white font-bold mb-2">Email Address *</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-800 border border-purple-500 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-pink-500 transition duration-300" placeholder="your@email.com">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <!-- Phone -->
+                    <div>
+                        <label for="phone" class="block text-white font-bold mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 bg-gray-800 border border-purple-500 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-pink-500 transition duration-300" placeholder="(123) 456-7890">
+                    </div>
+
+                    <!-- Subject -->
+                    <div>
+                        <label for="subject" class="block text-white font-bold mb-2">Subject *</label>
+                        <select id="subject" name="subject" required class="w-full px-4 py-3 bg-gray-800 border border-purple-500 rounded-lg text-white focus:outline-none focus:border-pink-500 transition duration-300">
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="appointment">Book Appointment</option>
+                            <option value="support">Customer Support</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="partnership">Partnership</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <div class="mb-6">
+                    <label for="message" class="block text-white font-bold mb-2">Message *</label>
+                    <textarea id="message" name="message" required rows="6" class="w-full px-4 py-3 bg-gray-800 border border-purple-500 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-pink-500 transition duration-300 resize-none" placeholder="Your message here..."></textarea>
+                </div>
+
+                <!-- Terms Checkbox -->
+                <div class="mb-8">
+                    <label class="flex items-center text-gray-300">
+                        <input type="checkbox" id="terms" name="terms" required class="w-4 h-4 accent-pink-500 cursor-pointer">
+                        <span class="ml-2">I agree to the terms and conditions</span>
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold rounded-lg hover:shadow-2xl hover:shadow-pink-500/50 transition duration-300 transform hover:scale-105">
+                    Send Message
+                </button>
+
+                <!-- Success Message -->
+                <div id="successMessage" class="hidden mt-6 p-4 bg-green-500 bg-opacity-20 border border-green-500 rounded-lg text-green-400 text-center">
+                    <i class="fas fa-check-circle mr-2"></i> Thank you! Your message has been sent successfully.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="py-20 px-4 bg-gray-800 bg-opacity-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Follow Us</h2>
+            <div class="flex justify-center gap-8">
+                <!-- Facebook -->
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white text-2xl hover:shadow-2xl hover:shadow-pink-500/50 transition duration-300 transform hover:scale-125">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center text-white text-2xl hover:shadow-2xl hover:shadow-purple-500/50 transition duration-300 transform hover:scale-125">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-full flex items-center justify-center text-white text-2xl hover:shadow-2xl hover:shadow-cyan-500/50 transition duration-300 transform hover:scale-125">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-4 bg-gray-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-gradient-to-br from-purple-900 to-gray-900 rounded-xl border border-purple-500 overflow-hidden">
+                    <button class="faq-button w-full p-6 text-left flex justify-between items-center hover:bg-purple-800 transition duration-300">
+                        <h3 class="text-xl font-bold text-white">How do I book an appointment?</h3>
+                        <i class="fas fa-chevron-down text-pink-400 transition duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-300">
+                        <p>You can easily book an appointment through our website or mobile app. Select your preferred doctor, choose an available time slot, and confirm your appointment. You'll receive a confirmation email with details.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-gradient-to-br from-purple-900 to-gray-900 rounded-xl border border-purple-500 overflow-hidden">
+                    <button class="faq-button w-full p-6 text-left flex justify-between items-center hover:bg-purple-800 transition duration-300">
+                        <h3 class="text-xl font-bold text-white">Is my medical information secure?</h3>
+                        <i class="fas fa-chevron-down text-pink-400 transition duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-300">
+                        <p>Yes, absolutely. We use end-to-end encryption and comply with all healthcare privacy regulations including HIPAA. Your data is stored securely and is only accessible by authorized medical professionals.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-gradient-to-br from-purple-900 to-gray-900 rounded-xl border border-purple-500 overflow-hidden">
+                    <button class="faq-button w-full p-6 text-left flex justify-between items-center hover:bg-purple-800 transition duration-300">
+                        <h3 class="text-xl font-bold text-white">What devices can I use for consultations?</h3>
+                        <i class="fas fa-chevron-down text-pink-400 transition duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-300">
+                        <p>You can use any device with a stable internet connection - smartphone, tablet, laptop, or desktop computer. We support all major browsers and have dedicated iOS and Android apps for the best experience.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-gradient-to-br from-purple-900 to-gray-900 rounded-xl border border-purple-500 overflow-hidden">
+                    <button class="faq-button w-full p-6 text-left flex justify-between items-center hover:bg-purple-800 transition duration-300">
+                        <h3 class="text-xl font-bold text-white">Do you offer prescription delivery?</h3>
+                        <i class="fas fa-chevron-down text-pink-400 transition duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-300">
+                        <p>Yes! After your consultation, prescriptions are automatically sent to our partner pharmacies. Medications are delivered to your address within 24-48 hours at no extra charge for Professional and Premium plan members.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item bg-gradient-to-br from-purple-900 to-gray-900 rounded-xl border border-purple-500 overflow-hidden">
+                    <button class="faq-button w-full p-6 text-left flex justify-between items-center hover:bg-purple-800 transition duration-300">
+                        <h3 class="text-xl font-bold text-white">Can I cancel my subscription anytime?</h3>
+                        <i class="fas fa-chevron-down text-pink-400 transition duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-300">
+                        <p>Yes, you can cancel your subscription at any time without any penalties or hidden charges. Your access will remain active until the end of your current billing cycle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-900 border-t border-purple-500 py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Mobile Healthcare</h3>
+                    <p class="text-gray-400">Your trusted telemedicine partner for quality healthcare.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-pink-400 transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-pink-400 transition">About</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-pink-400 transition">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-pink-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Contact Info</h3>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-phone text-pink-500 mr-2"></i>+1 (800) 123-4567</p>
+                    <p class="text-gray-400"><i class="fas fa-envelope text-pink-500 mr-2"></i>info@mhealthcare.com</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white hover:shadow-lg hover:shadow-pink-500/50 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center text-white hover:shadow-lg hover:shadow-purple-500/50 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-full flex items-center justify-center text-white hover:shadow-lg hover:shadow-cyan-500/50 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-purple-500 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2026 Mobile Healthcare. All rights reserved. | Designed with <i class="fas fa-heart text-pink-500"></i> for your health</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center text-white opacity-0 transform translate-y-10 hover:shadow-2xl transition duration-300 cursor-pointer z-40">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
