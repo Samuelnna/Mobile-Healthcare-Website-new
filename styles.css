@@ -1,0 +1,282 @@
+/* Custom Styles for Mobile Healthcare Website */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dark-theme {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(236, 72, 153, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(236, 72, 153, 0.8);
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-section h1 {
+    animation: slideInDown 1s ease-out;
+}
+
+.hero-section p {
+    animation: fadeIn 1.2s ease-out;
+}
+
+/* Feature Cards */
+.feature-card {
+    animation: fadeIn 0.8s ease-out;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card i {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover i {
+    transform: scale(1.1);
+}
+
+/* Service Cards */
+.service-card {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.service-card:hover {
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.4);
+}
+
+/* Pricing Cards */
+.pricing-card {
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover button {
+    transform: scale(1.05);
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.5);
+}
+
+/* Button Animations */
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.4);
+}
+
+/* Navigation Bar */
+.navbar {
+    animation: slideDown 0.5s ease-out;
+}
+
+#navMenu li a {
+    position: relative;
+}
+
+#navMenu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(to right, #ec4899, #06b6d4);
+    transition: width 0.3s ease;
+}
+
+#navMenu li a:hover::after {
+    width: 100%;
+}
+
+/* FAQ Accordion */
+.faq-toggle {
+    cursor: pointer;
+}
+
+.faq-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle i {
+    transform: rotate(180deg);
+}
+
+.faq-content {
+    animation: slideDown 0.3s ease-out;
+}
+
+.faq-content.show {
+    display: block;
+}
+
+/* Footer */
+.footer {
+    border-top: 2px solid;
+    border-image: linear-gradient(to right, #ec4899, #a855f7, #06b6d4) 1;
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ec4899, #a855f7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
+    transition: all 0.3s ease;
+    z-index: 40;
+}
+
+#scrollToTop:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.6);
+}
+
+#scrollToTop.show {
+    display: flex;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(to right, #ec4899, #a855f7, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Loading Animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero-section p {
+        font-size: 1.125rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .pricing-card {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+}
+
+/* Glass Morphism Effect */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Shadow Effects */
+.shadow-glow {
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+}
+
+.shadow-glow-lg {
+    box-shadow: 0 0 40px rgba(236, 72, 153, 0.5);
+}
+
+/* Smooth Transitions */
+* {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
